@@ -1,0 +1,44 @@
+.logo {
+    height: 50px; /* Ajusta la altura del logo */
+    width: auto; /* Mantiene la proporción del logo */
+    margin-right: 15px; /* Espacio a la derecha del logo */
+  }
+  
+
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #003366; /* Azul oscuro */
+    padding: 10px 20px;
+    height: 100px; /* Grosor del navbar */
+}
+
+.navbar-logo img {
+    height: 70px; /* Tamaño del logo */
+    margin-right: 20px;
+}
+
+/* Estilo de los enlaces */
+.navbar-links {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+}
+
+.navbar-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em; /* Tamaño de fuente */
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.navbar-links a i {
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+
+.navbar-links a:hover {
+    color: #FFD700; /* Color dorado en hover */
+}

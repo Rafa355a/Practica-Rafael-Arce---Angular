@@ -1,0 +1,159 @@
+<div class="container" id="home">
+    <h1>Bienvenido a Ikoni Perú</h1>
+    <p>Somos una empresa importadora de repuestos para camiones de todas las marcas.</p>
+  </div>
+  
+  <section id="nosotros" class="section-nosotros">
+    <h2>Nosotros</h2>
+    <div class="team-container">
+      <div class="card">
+        <h3 class="card-title">Equipo</h3>
+        <img src="assets/equipo.jpg" alt="Equipo" class="card-image">
+      </div>
+      <div class="card">
+        <h3 class="card-title">Almacén</h3>
+        <img src="assets/almacen.jpg" alt="Almacén" class="card-image">
+      </div>
+      <div class="card">
+        <h3 class="card-title">Tienda</h3>
+        <img src="assets/tienda.jpg" alt="Tienda" class="card-image">
+      </div>
+      <div class="card">
+        <h3 class="card-title">Empresa</h3>
+        <img src="assets/empresa.jpg" alt="Empresa" class="card-image">
+      </div>
+    </div>
+  </section>
+  
+  <section id="servicios" class="section-servicios">
+    <h2>SERVICIOS</h2>
+    <p>Estamos listos para atenderte.</p>
+    <div class="servicios-container">
+      <div class="service-card">
+        <i class="fas fa-briefcase service-icon"></i>
+        <h3>Ventas</h3>
+        <p>Venta de los mejores repuestos de partes de motor, cajas, transmisiones, piñones, coronas y trenes fijos de las marcas de Korea y Japón. A los mejores precios del mercado.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-chalkboard-teacher service-icon"></i>
+        <h3>Asesoría</h3>
+        <p>Le brindamos una asesoría personalizada acerca de nuestros productos, a elegir el mejor repuesto para su movilidad.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-shipping-fast service-icon"></i>
+        <h3>Delivery</h3>
+        <p>Compras sin salir de casa, realizamos entregas a domicilio en el menor tiempo posible.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-boxes service-icon"></i>
+        <h3>Productos</h3>
+        <p>Contamos con las mejores marcas y calidad de productos del mercado.</p>
+      </div>
+    </div>
+  </section>
+  
+  <section id="productos" class="section-productos">
+    <h2>NUESTROS PRODUCTOS</h2>
+    <p>Los mejores productos y precios.</p>
+  
+    <!-- Botones de categorías -->
+    <div class="product-categories">
+      <button class="category-btn" (click)="filterProducts('all')">TODAS LAS CATEGORÍAS</button>
+      <button class="category-btn" (click)="filterProducts('clutch')">DISCO, PLATO Y COLLARÍN DE EMBRAGUE</button>
+      <button class="category-btn" (click)="filterProducts('brake')">PASTILLA Y ZAPATA DE FRENO</button>
+      <button class="category-btn" (click)="filterProducts('gear')">PIÑÓN Y PARTE DE CAJA</button>
+      <button class="category-btn" (click)="filterProducts('new')">NUEVA CATEGORÍA</button>
+    </div>
+  
+    <!-- Lista de productos -->
+    <div class="product-list">
+      <div *ngFor="let product of filteredProducts" class="product-card">
+        <div class="product-image-container">
+          <img [src]="product.image" [alt]="product.name" class="product-image">
+          <div class="overlay">
+            <span class="product-name">{{ product.name }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <section class="section-marcas" id="marcas">
+    <h2>MARCAS</h2>
+    <p>Contamos con las marcas más reconocidas en el mercado nacional e internacional especializadas en la fabricación de repuestos para vehículos con altos estándares de calidad.</p>
+    <div class="marcas-container">
+        <!-- Tarjeta 1 -->
+        <div class="marca-card">
+            <img src="assets/sangsin.png" alt="Sangsin Brake" class="marca-logo">
+            <h3>SANGSIN BRAKE</h3>
+            <p>Fabricante líder en la industria Coreana de piezas y partes para frenos de fricción...</p>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="marca-card">
+            <img src="assets/hansang.png" alt="Hansang" class="marca-logo">
+            <h3>HANSANG</h3>
+            <p>La marca HANSANG maneja una amplia gama de repuestos de parte de caja...</p>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="marca-card">
+            <img src="assets/mando.png" alt="Mando" class="marca-logo">
+            <h3>Mando</h3>
+            <p>Mando Corporation pertenece al grupo Halla Holding y cuenta con 20 fábricas...</p>
+        </div>
+
+        <!-- Tarjeta 4 -->
+        <div class="marca-card">
+            <img src="assets/tcic.png" alt="TCIC" class="marca-logo">
+            <h3>TCIC</h3>
+            <p>Tae Chul Industrial Co. fabricante de piezas de automóviles con más de 70 años...</p>
+        </div>
+
+        <!-- Tarjeta 5 -->
+        <div class="marca-card">
+            <img src="assets/phcvaleo.png" alt="PHC Valeo" class="marca-logo">
+            <h3>PHC Valeo</h3>
+            <p>Valeo Pyeong Hwa International es una compañía que cuenta con más de 90 años...</p>
+        </div>
+
+        <!-- Tarjeta 6 -->
+        <div class="marca-card">
+            <img src="assets/yulim.png" alt="Yulim" class="marca-logo">
+            <h3>Yulim</h3>
+            <p>Establecida en 1998, Yulim High-Tech ha crecido como una de las compañías líderes...</p>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section id="contacto" class="section-contacto">
+  <h2>CONTÁCTENOS</h2>
+  <p>Llene el formulario y un asesor se pondrá en contacto lo más pronto posible.</p>
+
+  <div class="contacto-content">
+    <!-- Mapa de Google -->
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.5601805911964!2d-76.9841409494938!3d-12.057581391419412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105cf9b347e6f8d%3A0x2f604bb098d56ec9!2sAv.%20Nicol%C3%A1s%20Ayll%C3%B3n%203384%2C%20Ate%2015042!5e0!3m2!1ses!2spe!4v1616517472824!5m2!1ses!2spe"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <!-- Formulario de contacto -->
+    <div class="form-container">
+      <form>
+        <input type="text" placeholder="Apellidos y Nombres" required>
+        <input type="text" placeholder="Teléfono" required>
+        <input type="email" placeholder="Correo" required>
+        <input type="text" placeholder="Asunto" required>
+        <textarea placeholder="Mensaje" required></textarea>
+        <button type="submit">Enviar Mensaje</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
